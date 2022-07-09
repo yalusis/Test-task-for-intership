@@ -1,0 +1,68 @@
+.company {
+    height: 5em;
+    width: 10em;
+    font-size: 20px;
+    line-height: 5em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    margin-left: 4em;
+    display: inline-block;
+}
+
+.allcompany {
+    margin-top: 2em;
+    width: 25em;
+}
+
+#shops{
+    text-align: center;
+    margin-top: 1em;
+    font-size: 15px;
+}
+
+.BreadcrumbItem {
+    font-size: 20px;
+    margin-top: 1em;
+    margin-left: 6.5em;
+}
+
+.button {
+    float: right;
+}
+
+.inputsbox {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.label {
+    margin-left: 1em;
+}
+
+.inputs {
+    margin-left: 1em;
+    border-radius: 10px;
+    width: 27em;
+}
+
+.input {
+    width: 10em;
+}
+
+.submit{
+    width: 9em;
+    height: 3em;
+    float: right;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    border-radius: 10px;
+}
+
+.price {
+    margin-bottom: 5em;
+    margin-top: 5.5em;
+    margin-left: 5em;
+    display:  inline-block;
+}
