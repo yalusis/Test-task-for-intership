@@ -26,7 +26,7 @@ else {
            <CardImg width="100%" src={card.image} alt={card.name} />
            <CardBody>
            <CardTitle><h4>{card.name}</h4></CardTitle>
-           <Button className="button" onClick={() => props.setcart(card)}>Add to Cart</Button>
+           <Button className="button" onClick={() => addDishestoCard(card, props.setcart )}>Add to Cart</Button>
            </CardBody>
             </Card>
         </div>
@@ -34,6 +34,13 @@ else {
     })
 return cards
 }
+}
+
+const addDishestoCard = (card, setcart) => {
+    let agree = window.confirm("Додати " + card.name + " до кошика?");
+    if (agree) {
+        setcart(card)
+    }
 }
 
 const odd = (dishes) => {
