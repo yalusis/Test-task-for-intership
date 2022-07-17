@@ -16,7 +16,11 @@ const CartShop = (props) => {
     const target = event.target
         const newState = props.state.map(obj => {
             if (props.state.indexOf(obj) === Number(target.id)) {
-              return {...obj, amount: target.value};
+              if(target.value === "-1") {
+               alert("Не може бути від'ємне число!")
+              }else {
+               return {...obj, amount: target.value};
+              }
             }
 
             return obj;

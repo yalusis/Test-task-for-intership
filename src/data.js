@@ -101,7 +101,7 @@ export const DATA = [
         dish: [
          {
             id: 0,
-            name: 'Light vegetable salad',
+            name: 'Vegetable salad',
             image: '/assets/image/LaVeranda.jpg',
             price: 12,
             amount: 0
