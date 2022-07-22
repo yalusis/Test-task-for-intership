@@ -2,6 +2,7 @@ import React from "react";
 import {Card, Breadcrumb, BreadcrumbItem, Form,  FormGroup, Label, Input, Col, FormFeedback, CardImg, CardBody, CardText, CardTitle, Button} from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { useState } from "react";
+import { baseUrl } from '../baseUrl';
 
 const CartShop = (props) => {
     const [state, setState] = useState({ name: '', email: '', phone: '', adress: '' })
@@ -18,7 +19,6 @@ const CartShop = (props) => {
             if (props.state.indexOf(obj) === Number(target.id)) {
               if(Number(target.value) < 0) {
                alert("Не може бути від'ємне число!")
-               //console.log(Math.sign(target.value))
               }else {
                return {...obj, amount: target.value};
               }
@@ -35,21 +35,54 @@ const CartShop = (props) => {
     }
 
     function submitClick(event) {
+    if(state.adress === '' || state.name === '' || state.email === '' || state.phone === '') {
+        alert("Введіть всі данні")
+    } else {
     const price = totalPrice()
     const set_dish = []
     for(let i = 0; i < props.state.length; i++) {
-       set_dish.push({[i] : props.state[i].name, amount : props.state[i].amount })
+       set_dish.push({id : i, name : props.state[i].name, amount : props.state[i].amount })
     }
-    alert('Info about user: ' + JSON.stringify(state) + '. Info about set dishes: ' + JSON.stringify(set_dish) + '. Total price of all purchases: ' + JSON.stringify(price) + '$');
+    const newOrder = {
+        name: state.name,
+        email: state.email,
+        phone: state.phone,
+        adress: state.adress,
+        setDish: set_dish,
+        date: new Date(),
+        totalPrice: price
+    };
+
+    fetch(baseUrl + 'order', {
+        method: "POST",
+        body: JSON.stringify(newOrder),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        credentials: "same-origin"
+    })
+    .then(response => {
+        if (response.ok) {
+          return response;
+        } else {
+          var error = new Error('Error ' + response.status + ': ' + response.statusText);
+          error.response = response;
+          throw error;
+        }
+      },
+      error => {
+            throw error;
+      })
+    .then(response => response.json())
+    .catch(error =>  { console.log('post order', error.message); alert('Your order could not be posted\nError: '+ error.message); });
     event.preventDefault();
     }
+}
 
     function validate( phone, email) {
         const errors = {
             phone: '',
-            email: '',
-            name: '',
-            adress: ''
+            email: ''
         };
 
         const reg = /^\d+$/;
@@ -116,8 +149,6 @@ const CartShop = (props) => {
                                     <Input className="inputs" type="text" id="name" name="name"
                                         placeholder="Name" 
                                         value={state.name}
-                                        valid={errors.name === ''}
-                                        invalid={errors.name !== ''}
                                         onChange={handleInputChange}/>
                                 </Col>
                             </FormGroup>
@@ -127,7 +158,6 @@ const CartShop = (props) => {
                                     <Input className="inputs" type="email" id="email" name="email"
                                         placeholder="Email" 
                                         value={state.email}
-                                        valid={errors.email === ''}
                                         invalid={errors.email !== ''}
                                         onBlur={ handleBlurd }
                                         onChange={handleInputChange}/>
@@ -140,7 +170,6 @@ const CartShop = (props) => {
                                     <Input className="inputs" type="text" id="phone" name="phone"
                                         placeholder="Phone" 
                                         value={state.phone}
-                                        valid={errors.phone === ''}
                                         invalid={errors.phone !== ''}
                                         onBlur={ handleBlurd }
                                         onChange={handleInputChange}/>
@@ -153,8 +182,6 @@ const CartShop = (props) => {
                                     <Input className="inputs" type="text" id="adress" name="adress"
                                         placeholder="Adress" 
                                         value={state.adress}
-                                        valid={errors.adress === ''}
-                                        invalid={errors.adress !== ''}
                                         onChange={handleInputChange}/>
                                 </Col>
                             </FormGroup>

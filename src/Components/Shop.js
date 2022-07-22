@@ -3,8 +3,11 @@ import { Card, Breadcrumb, BreadcrumbItem, CardImg, CardTitle, CardBody, Button 
 import { Link } from 'react-router-dom'
 
 const Shop = (props) => {
+if(props.info == null){
+    return <div></div>
+} else {
 
-const shops = props.info.map((shop) => {
+let shops = props.info.stateData.map((shop) => {
     return (
     <div key={shop.id} className="col-12 col-md-5 m-1" >
         <Card className="company" onClick={() => props.set(shop.dish)}>
@@ -87,6 +90,7 @@ return (
      </div>
     </div>
 )
+}
 }
 
 export default Shop;

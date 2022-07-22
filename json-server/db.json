@@ -1,0 +1,330 @@
+{
+  "dishes": [
+    {
+      "id": 0,
+      "name": "Mc Donalds",
+      "dish": [
+        {
+          "id": 0,
+          "name": "Big Mac",
+          "image": "/assets/image/mac.jpg",
+          "price": "10",
+          "amount": "0"
+        },
+        {
+          "id": 1,
+          "name": "Big Tasty",
+          "image": "/assets/image/mac.jpg",
+          "price": "12.5",
+          "amount": "0"
+        },
+        {
+          "id": 2,
+          "name": "McChicken",
+          "image": "/assets/image/mac.jpg",
+          "price": "9",
+          "amount": "0"
+        },
+        {
+          "id": "3",
+          "name": "Cheeseburger",
+          "image": "/assets/image/mac.jpg",
+          "price": "10",
+          "amount": "0"
+        },
+        {
+          "id": 4,
+          "name": "Hamburger",
+          "image": "/assets/image/mac.jpg",
+          "price": "12",
+          "amount": "0"
+        },
+        {
+          "id": 5,
+          "name": "Royal Cheeseburger",
+          "image": "/assets/image/mac.jpg",
+          "price": "7",
+          "amount": "0"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "KFC",
+      "dish": [
+        {
+          "id": 0,
+          "name": "Double Chicken",
+          "image": "/assets/image/kfc.jpg",
+          "price": "11",
+          "amount": "0"
+        },
+        {
+          "id": 1,
+          "name": "Сhicken Burger",
+          "image": "/assets/image/kfc.jpg",
+          "price": "10",
+          "amount": "0"
+        },
+        {
+          "id": 2,
+          "name": "Cheeseburger",
+          "image": "/assets/image/kfc.jpg",
+          "price": "9",
+          "amount": "0"
+        },
+        {
+          "id": 3,
+          "name": "Longer",
+          "image": "/assets/image/kfc.jpg",
+          "price": "15",
+          "amount": "0"
+        },
+        {
+          "id": "4",
+          "name": "French fries",
+          "image": "/assets/image/kfc.jpg",
+          "price": "8.5",
+          "amount": "0"
+        },
+        {
+          "id": 5,
+          "name": "Spicy Wings",
+          "image": "/assets/image/kfc.jpg",
+          "price": "18",
+          "amount": "0"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "La Veranda",
+      "dish": [
+        {
+          "id": 0,
+          "name": "Vegetable salad",
+          "image": "/assets/image/LaVeranda.jpg",
+          "price": "12",
+          "amount": "0"
+        },
+        {
+          "id": "1",
+          "name": "Ribeye Steak",
+          "image": "/assets/image/LaVeranda.jpg",
+          "price": "15",
+          "amount": "0"
+        },
+        {
+          "id": 2,
+          "name": "Vanilla panna cotta with berry sauce",
+          "image": "/assets/image/LaVeranda.jpg",
+          "price": "22",
+          "amount": "0"
+        },
+        {
+          "id": 3,
+          "name": "Beet carpaccio with goat cheese",
+          "image": "/assets/image/LaVeranda.jpg",
+          "price": "18",
+          "amount": "0"
+        },
+        {
+          "id": 4,
+          "name": "Marinated salmon with teriyaki sauce",
+          "image": "/assets/image/LaVeranda.jpg",
+          "price": "20",
+          "amount": "0"
+        },
+        {
+          "id": 5,
+          "name": "Cream of asparagus soup with poached egg",
+          "image": "/assets/image/LaVeranda.jpg",
+          "price": "25",
+          "amount": "0"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Villa Riviera",
+      "dish": [
+        {
+          "id": 0,
+          "name": "Carpaccio with veal",
+          "image": "/assets/image/VillaRiviera.jpg",
+          "price": "21.5",
+          "amount": "0"
+        },
+        {
+          "id": 1,
+          "name": "Caesar salad",
+          "image": "/assets/image/VillaRiviera.jpg",
+          "price": "20.5",
+          "amount": "0"
+        },
+        {
+          "id": 2,
+          "name": "Borscht with veal",
+          "image": "/assets/image/VillaRiviera.jpg",
+          "price": "19",
+          "amount": "0"
+        },
+        {
+          "id": 3,
+          "name": "Pizza with chicken",
+          "image": "/assets/image/VillaRiviera.jpg",
+          "price": "30",
+          "amount": "0"
+        },
+        {
+          "id": 4,
+          "name": "Grilled vegetables",
+          "image": "/assets/image/VillaRiviera.jpg",
+          "price": "23",
+          "amount": "0"
+        },
+        {
+          "id": 5,
+          "name": "Cheesecake",
+          "image": "/assets/image/VillaRiviera.jpg",
+          "price": "13.5",
+          "amount": "0"
+        }
+      ]
+    }
+  ],
+  "order": [
+    {
+      "name": "a",
+      "email": "yanis@ukr.net",
+      "phone": "35465798",
+      "adress": "a",
+      "setDish": [
+        {
+          "id": 0,
+          "name": "Сhicken Burger",
+          "amount": "2"
+        },
+        {
+          "id": 1,
+          "name": "Cheeseburger",
+          "amount": "2"
+        }
+      ],
+      "totalPrice": 38,
+      "date": "2022-07-22T08:03:23.091Z",
+      "id": 1
+    },
+    {
+      "name": "a",
+      "email": "yanis@ukr.net",
+      "phone": "35465798",
+      "adress": "a",
+      "setDish": [
+        {
+          "id": 0,
+          "name": "Сhicken Burger",
+          "amount": "2"
+        },
+        {
+          "id": 1,
+          "name": "Cheeseburger",
+          "amount": "3"
+        }
+      ],
+      "totalPrice": 47,
+      "date": "2022-07-22T08:05:21.169Z",
+      "id": 2
+    },
+    {
+      "name": "a",
+      "email": "yanis@ukr.net",
+      "phone": "35465798",
+      "adress": "a",
+      "setDish": [
+        {
+          "id": 0,
+          "name": "Сhicken Burger",
+          "amount": "2"
+        },
+        {
+          "id": 1,
+          "name": "Cheeseburger",
+          "amount": "3"
+        }
+      ],
+      "totalPrice": 47,
+      "date": "2022-07-22T08:05:59.736Z",
+      "id": 3
+    },
+    {
+      "name": "Yanis",
+      "email": "yanis@ukr.net",
+      "phone": "357543446",
+      "adress": "a",
+      "setDish": [
+        {
+          "id": 0,
+          "name": "Big Tasty",
+          "amount": "3"
+        },
+        {
+          "id": 1,
+          "name": "Beet carpaccio with goat cheese",
+          "amount": "2"
+        }
+      ],
+      "totalPrice": 73.5,
+      "date": "2022-07-22T08:09:39.234Z",
+      "id": 4
+    },
+    {
+      "name": "Yanis",
+      "email": "yanis@ukr.net",
+      "phone": "357543446",
+      "adress": "a",
+      "setDish": [
+        {
+          "id": 0,
+          "name": "Beet carpaccio with goat cheese",
+          "amount": "2"
+        }
+      ],
+      "totalPrice": 36,
+      "date": "2022-07-22T08:11:09.689Z",
+      "id": 5
+    },
+    {
+      "name": "Ya",
+      "email": "yanis@ukr.net",
+      "phone": "357543446",
+      "adress": "aaa",
+      "setDish": [
+        {
+          "id": 0,
+          "name": "Beet carpaccio with goat cheese",
+          "amount": "2"
+        }
+      ],
+      "date": "2022-07-22T08:20:05.698Z",
+      "totalPrice": 36,
+      "id": 6
+    },
+    {
+      "name": "Ya",
+      "email": "yanis@ukr.net",
+      "phone": "357543446",
+      "adress": "cccccccccc",
+      "setDish": [
+        {
+          "id": 0,
+          "name": "Beet carpaccio with goat cheese",
+          "amount": "2"
+        }
+      ],
+      "date": "2022-07-22T08:20:40.098Z",
+      "totalPrice": 36,
+      "id": 7
+    }
+  ]
+}
